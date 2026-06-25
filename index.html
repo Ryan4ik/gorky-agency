@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГОРЬКИЙ | SMM и Маркетинг для компьютерных клубов и киберспорта</title>
+    <meta name="description" content="Маркетинг и продвижение компьютерных клубов, VR-арен, киберспортивных турниров и игр с опытом SMM более 8 лет. Развили сеть КиберПрайд до 100+ клубов.">
+    <meta name="keywords" content="SMM компьютерный клуб, продвижение компьютерных клубов, маркетинг киберспорта, реклама VR арен, КиберПрайд SMM, агентство Горький">
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="ГОРЬКИЙ | SMM и Маркетинг для компьютерных клубов">
+    <meta property="og:description" content="Продвигаем компьютерные клубы, VR арены, игры и киберспорт. 8+ лет опыта, 100+ открытых клубов, 50 000+ подписчиков привлечено за 2024 год.">
+    <meta property="og:image" content="assets/hero_bg.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.svg" alt="ГОРЬКИЙ SMM" class="logo-img">
+            </a>
+            
+            <nav class="nav">
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#niches" class="nav-link">Направления</a>
+                <a href="#case" class="nav-link">Кейс</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+            
+            <a href="#contact" class="btn btn-outline btn-nav-cta">Начать проект</a>
+            
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">О нас</a>
+        <a href="#niches" class="mobile-link">Направления</a>
+        <a href="#case" class="mobile-link">Кейс</a>
+        <a href="#contact" class="mobile-link">Контакты</a>
+        <a href="#contact" class="btn btn-primary mobile-cta">Начать проект</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section fallback-bg" id="hero">
+            <canvas id="sequence-canvas"></canvas>
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-glow">
+                        <span class="badge-pulse"></span>
+                        8+ лет в SMM & Гейминг Маркетинге
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        МАРКЕТИНГ ДЛЯ <br>
+                        <span class="text-purple">КОМПЬЮТЕРНЫХ КЛУБОВ</span> <br>
+                        И КИБЕРСПОРТА
+                    </h1>
+                    
+                    <p class="hero-desc">
+                        Профессиональное ведение и продвижение киберспортивных арен, VR-клубов, мобильных/ПК игр и военно-тактических проектов. Знаем, как забить ваши игровые места на 100% и превратить подписчиков в постоянных гостей.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#niches" class="btn btn-primary">Посмотреть услуги</a>
+                        <a href="#contact" class="btn btn-secondary">Заказать аудит</a>
+                    </div>
+                </div>
+                
+                <!-- Stats Grid (About Section) -->
+                <div class="stats-grid" id="about">
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-glow bg-cyan"></div>
+                        <div class="stat-num-container">
+                            <span class="stat-num" data-target="8">0</span>
+                        </div>
+                        <p class="stat-label">Лет опыта в гейминг SMM</p>
+                        <div class="stat-corner-top"></div>
+                        <div class="stat-corner-bottom"></div>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-glow bg-cyan"></div>
+                        <div class="stat-num-container">
+                            <span class="stat-num" data-target="100">0</span>
+                        </div>
+                        <p class="stat-label">Успешно открытых клубов по РФ</p>
+                        <div class="stat-corner-top"></div>
+                        <div class="stat-corner-bottom"></div>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-glow bg-green"></div>
+                        <div class="stat-num-container">
+                            <span class="stat-prefix">+</span>
+                            <span class="stat-num" data-target="50000">0</span>
+                        </div>
+                        <p class="stat-label">Подписчиков привели в соцсети в 2024</p>
+                        <div class="stat-corner-top"></div>
+                        <div class="stat-corner-bottom"></div>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-glow bg-cyan"></div>
+                        <div class="stat-num-container">
+                            <span class="stat-prefix">+</span>
+                            <span class="stat-num" data-target="25000">0</span>
+                        </div>
+                        <p class="stat-label">Игроков привели в приложения и игры</p>
+                        <div class="stat-corner-top"></div>
+                        <div class="stat-corner-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Cyber Lines (Decorations) -->
+            <div class="cyber-line-decor decor-1"></div>
+            <div class="cyber-line-decor decor-2"></div>
+        </section>
+
+        <!-- Niches & Interactive Cards Section -->
+        <section class="niches-section" id="niches">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="text-glow">НАШИ</span> НАПРАВЛЕНИЯ</h2>
+                    <p class="section-desc">Нажмите на карточку, чтобы изучить подробные механики и стратегии продвижения для каждой ниши.</p>
+                </div>
+                
+                <div class="niches-grid">
+                    <!-- Card 1: Компьютерные клубы -->
+                    <div class="niche-card" data-niche="clubs">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="13" rx="2" />
+                                    <path d="M6 21h12" />
+                                    <path d="M12 16v5" />
+                                    <path d="M8 8h8" />
+                                    <path d="M8 11h5" />
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">Компьютерные клубы</h3>
+                            <p class="niche-short">Увеличение загрузки залов, привлечение постоянных игроков и выстраивание сильного комьюнити.</p>
+                            <span class="btn-more">Подробнее <span class="arrow-icon">→</span></span>
+                            
+                            <!-- Detailed Info (hidden initially) -->
+                            <div class="card-detail-content">
+                                <h4>Стратегия продвижения:</h4>
+                                <ul>
+                                    <li><span>Локальный таргет:</span> Реклама в радиусе 1.5–3 км от клуба с горячими офферами (пакетные часы, ночные сессии).</li>
+                                    <li><span>Киберспортивные турниры:</span> Регулярное проведение внутренних ивентов с трансляциями и призовыми фондами.</li>
+                                    <li><span>Интеграция софта:</span> Настройка уведомлений и промокодов через интеграцию клубного ПО (Gisby, SmartShell, Senet).</li>
+                                    <li><span>Комьюнити-менеджмент:</span> Игровые чаты, мемы, рейтинги игроков и система лояльности.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Киберспортивные турниры -->
+                    <div class="niche-card" data-niche="esports">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                    <path d="M4 22h16" />
+                                    <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34" />
+                                    <path d="M12 2a6 6 0 0 1 6 6v5a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8a6 6 0 0 1 6-6Z" />
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">Киберспорт & Ивенты</h3>
+                            <p class="niche-short">Увеличение охватов турниров, регистрация команд и привлечение спонсоров в проект.</p>
+                            <span class="btn-more">Подробнее <span class="arrow-icon">→</span></span>
+                            
+                            <div class="card-detail-content">
+                                <h4>Стратегия продвижения:</h4>
+                                <ul>
+                                    <li><span>Сбор регистраций:</span> Лид-магниты с ценными гайдами по мете или скинами для участников.</li>
+                                    <li><span>Работа с блогерами:</span> Посевы в локальных игровых пабликах и привлечение комментаторов.</li>
+                                    <li><span>Контент-прогрев:</span> Видео-интервью с участниками, хайлайты прошлых игр, инфографика команд.</li>
+                                    <li><span>Спонсорские интеграции:</span> Создание нативных спецпроектов, интеграция брендов в графику трансляций.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Мобильные и ПК игры -->
+                    <div class="niche-card" data-niche="games">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="6" width="20" height="12" rx="3" />
+                                    <path d="M6 12h4M8 10v4" />
+                                    <circle cx="15" cy="11" r="1" />
+                                    <circle cx="18" cy="13" r="1" />
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">Мобильные & ПК Игры</h3>
+                            <p class="niche-short">Запуск вирусного трафика, рост установок игр и регистрация активных пользователей.</p>
+                            <span class="btn-more">Подробнее <span class="arrow-icon">→</span></span>
+                            
+                            <div class="card-detail-content">
+                                <h4>Стратегия продвижения:</h4>
+                                <ul>
+                                    <li><span>Инфлюенс-маркетинг:</span> Масштабные рекламные интеграции у игровых стримеров на Twitch/YouTube.</li>
+                                    <li><span>TikTok & Reels:</span> Производство коротких вирусных геймплейных роликов и фанового контента.</li>
+                                    <li><span>ASO & Трафик:</span> Привлечение целевых пользователей через альтернативные каналы закупки (Telegram Ads, VK).</li>
+                                    <li><span>Прогрев через блоги:</span> Публикация дневников разработки (DevLogs), интерактивное вовлечение в развитие игры.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: VR Арены -->
+                    <div class="niche-card" data-niche="vr">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 8v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2Z" />
+                                    <path d="M9 10h.01M15 10h.01" />
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">VR Арены</h3>
+                            <p class="niche-short">Продажа групповых посещений, детских дней рождений и корпоративов нового формата.</p>
+                            <span class="btn-more">Подробнее <span class="arrow-icon">→</span></span>
+                            
+                            <div class="card-detail-content">
+                                <h4>Стратегия продвижения:</h4>
+                                <ul>
+                                    <li><span>Эмоциональный контент:</span> Видео-съемка реакций игроков в очках виртуальной реальности (WOW-эффект).</li>
+                                    <li><span>Пакетные предложения:</span> Разработка и продвижение готовых пакетов под праздники (День рождения, Корпоратив).</li>
+                                    <li><span>Мамские сообщества:</span> Таргетированная реклама на родителей школьников с акцентом на безопасность и новизну.</li>
+                                    <li><span>SEO & Карты:</span> Оптимизация профилей Яндекс.Карт и Google Maps для сбора локального трафика.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Лазертаг и Страйкбол -->
+                    <div class="niche-card" data-niche="combat">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">Лазертаг & Страйкбол</h3>
+                            <p class="niche-short">Привлечение мужских компаний, организация масштабных тактических маневров и тимбилдингов.</p>
+                            <span class="btn-more">Подробнее <span class="arrow-icon">→</span></span>
+                            
+                            <div class="card-detail-content">
+                                <h4>Стратегия продвижения:</h4>
+                                <ul>
+                                    <li><span>Экшен-прогрев:</span> Качественные динамичные видеосъемки игр от первого лица (GoPro).</li>
+                                    <li><span>B2B Маркетинг:</span> Направленные предложения для HR-специалистов крупных компаний (активный тимбилдинг).</li>
+                                    <li><span>Лид-опросы (Квизы):</span> Сбор заявок через опросы в духе "Узнай, какой тип оружия тебе подходит" с купоном на скидку.</li>
+                                    <li><span>Ретаргетинг:</span> Возврат старых клиентов через организацию регулярных сборных игр выходного дня.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Modal for Card Detail Viewing -->
+        <div class="cyber-modal" id="niche-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <button class="modal-close" aria-label="Закрыть модальное окно">×</button>
+                <div class="modal-glow"></div>
+                <div class="modal-body">
+                    <!-- Content will be injected via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study Section (CyberPride) -->
+        <section class="case-section" id="case">
+            <div class="container">
+                <div class="case-wrapper">
+                    <div class="case-info">
+                        <div class="case-badge">НАША ГОРДОСТЬ / КЕЙС</div>
+                        <h2 class="case-title">СЕТЬ КОМПЬЮТЕРНЫХ КЛУБОВ <span class="text-gradient">КИБЕРПРАЙД</span></h2>
+                        <p class="case-desc">
+                            За 3 года плотной работы наша команда развила проект с нуля до одной из крупнейших и прогрессивных сетей киберспортивных арен в России. Мы выстроили единую автоматизированную систему маркетинга, доказавшую свою эффективность.
+                        </p>
+                        
+                        <div class="case-achievements">
+                            <div class="case-achieve-item">
+                                <div class="achieve-icon">✓</div>
+                                <div class="achieve-text">
+                                    <strong>100+ клубов</strong> открыто по всей территории РФ и выведено на окупаемость
+                                </div>
+                            </div>
+                            <div class="case-achieve-item">
+                                <div class="achieve-icon">✓</div>
+                                <div class="achieve-text">
+                                    <strong>Стабильный доход</strong> с первого месяца работы за счет мощной воронки открытия
+                                </div>
+                            </div>
+                            <div class="case-achieve-item">
+                                <div class="achieve-icon">✓</div>
+                                <div class="achieve-text">
+                                    <strong>Сквозная аналитика</strong> и автоматизированный постинг контента для всей франшизы
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-stats-row">
+                            <div class="case-stat">
+                                <div class="case-stat-val">3 года</div>
+                                <div class="case-stat-lbl">Сотрудничества</div>
+                            </div>
+                            <div class="case-stat">
+                                <div class="case-stat-val">100+</div>
+                                <div class="case-stat-lbl">Локаций сети</div>
+                            </div>
+                            <div class="case-stat">
+                                <div class="case-stat-val">№1</div>
+                                <div class="case-stat-lbl">По темпам роста</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-visual">
+                        <div class="case-image-wrapper">
+                            <img src="assets/cyberpride_case.jpg" alt="КиберПрайд компьютерный клуб" class="case-image">
+                            <div class="case-img-glow"></div>
+                            <div class="scanlines"></div>
+                        </div>
+                        <div class="case-overlay-tag">
+                            <span class="tag-status"></span>
+                            <span>ONLINE | КЕЙС CYBERPRIDE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section / Terminal Form -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+                <div class="contact-header">
+                    <h2 class="section-title">ЗАПУСТИТЬ <span class="text-glow-magenta">ТРАФИК</span></h2>
+                    <p class="section-desc">Оставьте заявку. Мы проведем бесплатный аудит ваших текущих соцсетей и предложим стратегию вывода вашего клуба в ТОП-1 города.</p>
+                </div>
+                
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">gorky_marketing_terminal.sh</div>
+                        <div class="terminal-status">SECURE CONNECTION</div>
+                    </div>
+                    
+                    <form class="terminal-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+                                <input type="text" id="form-name" required placeholder="Например, Алексей">
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-project">НАЗВАНИЕ КЛУБА / ПРОЕКТА</label>
+                                <input type="text" id="form-project" required placeholder="Например, CyberZone">
+                                <span class="input-line"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-link">ССЫЛКА НА ТЕКУЩИЕ СОЦ.СЕТИ (ЕСЛИ ЕСТЬ)</label>
+                                <input type="url" id="form-link" placeholder="vk.com/yourclub">
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-contact">TELEGRAM / WHATSAPP / ТЕЛЕФОН</label>
+                                <input type="text" id="form-contact" required placeholder="@gorky_smm или +7...">
+                                <span class="input-line"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="form-message">ОПИШИТЕ ВАШУ ЗАДАЧУ</label>
+                            <textarea id="form-message" rows="4" placeholder="Каких результатов вы хотите достичь? Каковы основные проблемы с посещаемостью?"></textarea>
+                            <span class="input-line"></span>
+                        </div>
+                        
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">ИНИЦИИРОВАТЬ АУДИТ</span>
+                                <span class="btn-loader"></span>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="terminal-success-message" id="success-message">
+                        <div class="success-icon">✓</div>
+                        <h3>ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА</h3>
+                        <p>Наш SMM-специалист свяжется с вами в течение 2 часов для проведения бесплатного разбора вашей группы.</p>
+                        <button class="btn btn-outline btn-reset-form">Отправить еще одну заявку</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="assets/logo.svg" alt="ГОРЬКИЙ SMM" class="logo-img">
+                </a>
+                <p class="footer-desc">Специализированное SMM агентство полного цикла для компьютерных клубов, VR арен, игровых проектов и киберспорта.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Разделы</h4>
+                <a href="#about">О нас</a>
+                <a href="#niches">Направления</a>
+                <a href="#case">Кейс CyberPride</a>
+                <a href="#contact">Заявка</a>
+            </div>
+
+            <div class="footer-contacts">
+                <h4>Связаться напрямую</h4>
+                <a href="https://vk.com/gorky_smm" class="social-link" target="_blank">ВКонтакте: vk.com/gorky_smm</a>
+                <a href="https://t.me/gorky_smm" class="social-link" target="_blank">Telegram: @gorky_smm</a>
+                <p>Email: info@gorky-smm.ru</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 SMM-агентство «ГОРЬКИЙ». Все права защищены.</p>
+                <p>Сделано с любовью к киберспорту</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
