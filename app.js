@@ -463,7 +463,7 @@ function initContactForm() {
         const contact = document.getElementById('form-contact').value;
         const message = document.getElementById('form-message').value || 'Без описания';
 
-        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.includes('github.io');
 
         if (isLocal) {
             // Local testing: send directly to Telegram (requires VPN in RF, but doesn't require PHP backend)
