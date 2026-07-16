@@ -456,19 +456,86 @@ function initContactForm() {
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('disabled', 'true');
         
-        // Simulate high-tech terminal process processing time
-        setTimeout(() => {
-            // Hide form and display success panel
-            form.style.display = 'none';
-            successMsg.classList.add('active');
-            
-            // Reset button states
-            submitBtn.classList.remove('loading');
-            submitBtn.removeAttribute('disabled');
-            
-            // Print command response to console for immersive dev environment testing
-            console.log("MARKETING TERMINAL: Payload successfully transmitted via TLS.");
-        }, 1800);
+        // Gather input values
+        const name = document.getElementById('form-name').value;
+        const project = document.getElementById('form-project').value;
+        const link = document.getElementById('form-link').value || 'Не указана';
+        const contact = document.getElementById('form-contact').value;
+        const message = document.getElementById('form-message').value || 'Без описания';
+
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+        if (isLocal) {
+            // Local testing: send directly to Telegram (requires VPN in RF, but doesn't require PHP backend)
+            const tgToken = '8758324822:AAECnS2-pm588P6UhTBVcsIWI-l_wsTvarw';
+            const tgChatId = '-1003895176653';
+            const text = `<b>🔔 Новая заявка на аудит! (ЛОКАЛЬНО)</b>\n\n<b>👤 Имя:</b> ${name}\n<b>🎮 Проект:</b> ${project}\n<b>🔗 Ссылка:</b> ${link}\n<b>📱 Контакты:</b> ${contact}\n<b>💬 Задача:</b> ${message}`;
+
+            fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: tgChatId,
+                    text: text,
+                    parse_mode: 'HTML'
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Telegram API error');
+                }
+                return response.json();
+            })
+            .then(data => {
+                form.style.display = 'none';
+                successMsg.classList.add('active');
+                console.log("MARKETING TERMINAL: (Local) Payload successfully transmitted via Telegram API.");
+            })
+            .catch(error => {
+                console.error("MARKETING TERMINAL ERROR: Local transmission failed.", error);
+                alert("Ошибка локальной отправки! Пожалуйста, убедитесь, что у вас включен VPN (так как провайдеры в РФ блокируют прямой доступ к серверам Telegram API с компьютера).");
+            })
+            .finally(() => {
+                submitBtn.classList.remove('loading');
+                submitBtn.removeAttribute('disabled');
+            });
+        } else {
+            // Production: send request to our backend send.php proxy script (works without VPN)
+            fetch('send.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    project: project,
+                    link: link,
+                    contact: contact,
+                    message: message
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Server returned error status');
+                }
+                return response.json();
+            })
+            .then(data => {
+                form.style.display = 'none';
+                successMsg.classList.add('active');
+                console.log("MARKETING TERMINAL: Payload successfully processed and sent via send.php.");
+            })
+            .catch(error => {
+                console.error("MARKETING TERMINAL ERROR: Transmission failed.", error);
+                alert("Ошибка отправки! Пожалуйста, попробуйте еще раз.");
+            })
+            .finally(() => {
+                submitBtn.classList.remove('loading');
+                submitBtn.removeAttribute('disabled');
+            });
+        }
     });
     
     resetBtn.addEventListener('click', () => {
