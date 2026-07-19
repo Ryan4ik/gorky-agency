@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCanvasBackground();
     initCard3DTilt();
     initNicheModal();
+    initNewsModal();
     initStatsCounter();
     initContactForm();
     initScrollSequence();
@@ -385,6 +386,29 @@ function initNicheModal() {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
+    });
+}
+
+/* ==========================================
+   BLOG & NEWS DETAILS MODAL INTERACTION
+   ========================================== */
+function initNewsModal() {
+    const cards = document.querySelectorAll('.news-card');
+    const modal = document.getElementById('niche-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Get content from the card
+            const detailedContent = card.querySelector('.article-full-content').innerHTML;
+            
+            // Build modal structure
+            modalBody.innerHTML = detailedContent;
+            
+            // Open modal
+            modal.classList.add('active');
+            document.body.classList.add('no-scroll');
+        });
     });
 }
 
