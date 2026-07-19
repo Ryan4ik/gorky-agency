@@ -1752,7 +1752,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .modal-article-image-wrapper {
         margin: -32px -20px 20px -20px;
-        height: 180px;
+        height: auto;
     }
 
     .form-submit-container {
