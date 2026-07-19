@@ -1589,7 +1589,7 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .case-wrapper {
+    .case-wrapper, .case-wrapper.reverse {
         grid-template-columns: 1fr;
         gap: 48px;
     }
@@ -1620,6 +1620,14 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-desc {
         font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-desc {
+        font-size: 0.95rem;
     }
     
     .niches-grid {
@@ -1673,6 +1681,16 @@ h1, h2, h3, h4, h5, h6 {
     
     .modal-body {
         padding: 32px 20px;
+    }
+
+    .form-submit-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+        min-width: unset;
     }
 }
 
