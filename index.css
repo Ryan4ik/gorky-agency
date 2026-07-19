@@ -35,13 +35,17 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     background-color: var(--bg-deep);
     color: var(--text-white);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
 }
 
 #bg-canvas {
@@ -96,6 +100,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     letter-spacing: -0.02em;
     font-weight: 800;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .text-gradient {
@@ -1630,6 +1636,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95rem;
     }
     
+    .case-title {
+        font-size: 1.6rem;
+    }
+    
     .niches-grid {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -1677,6 +1687,10 @@ h1, h2, h3, h4, h5, h6 {
     .case-stats-row {
         flex-direction: column;
         gap: 20px;
+    }
+    
+    .case-title {
+        font-size: 1.35rem;
     }
     
     .modal-body {
