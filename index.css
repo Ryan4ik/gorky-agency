@@ -808,16 +808,13 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
 }
-
 .cyber-modal.active .modal-container {
     transform: scale(1) translateY(0);
 }
 
-}
-
 .modal-close {
     position: absolute;
-    top: 20px;
+    top: 16px;
     right: 20px;
     width: 44px;
     height: 44px;
@@ -826,22 +823,23 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     font-size: 1.8rem;
     color: var(--text-white);
-    background: rgba(3, 3, 13, 0.7);
+    background: rgba(168, 85, 247, 0.25);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.5);
     border-radius: 4px;
     cursor: pointer;
     transition: var(--transition-fast);
     z-index: 10;
     line-height: 1;
     padding: 0 0 4px 0;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
 }
 
 .modal-close:hover {
-    color: var(--neon-cyan);
-    background: rgba(49, 32, 216, 0.3);
-    border-color: rgba(49, 32, 216, 0.5);
-    box-shadow: 0 0 10px rgba(49, 32, 216, 0.5);
+    color: var(--text-white);
+    background: rgba(168, 85, 247, 0.6);
+    border-color: var(--text-white);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
 }
 
 .modal-glow {
@@ -864,14 +862,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: -48px -48px 28px -48px;
     position: relative;
     overflow: hidden;
-    height: 320px;
+    height: auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .modal-article-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 .modal-article-image-overlay {
