@@ -399,11 +399,23 @@ function initNewsModal() {
     
     cards.forEach(card => {
         card.addEventListener('click', (e) => {
+            // Get image src and alt from the clicked card
+            const imageSrc = card.querySelector('.news-image').src;
+            const imageAlt = card.querySelector('.news-image').alt;
+            
             // Get content from the card
             const detailedContent = card.querySelector('.article-full-content').innerHTML;
             
-            // Build modal structure
-            modalBody.innerHTML = detailedContent;
+            // Build modal structure with full-width image on top
+            modalBody.innerHTML = `
+                <div class="modal-article-image-wrapper">
+                    <img src="${imageSrc}" class="modal-article-image" alt="${imageAlt}">
+                    <div class="modal-article-image-overlay"></div>
+                </div>
+                <div class="modal-article-body-content">
+                    ${detailedContent}
+                </div>
+            `;
             
             // Open modal
             modal.classList.add('active');
