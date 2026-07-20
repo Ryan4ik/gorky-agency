@@ -111,10 +111,10 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0 2px 8px rgba(49, 32, 216, 0.2));
 }
 .text-gradient-orange-blue {
-    background: linear-gradient(135deg, #f25b22 0%, #001a9c 100%);
+    background: linear-gradient(135deg, #ff7b00 0%, #1934d7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 10px rgba(242, 91, 34, 0.3));
+    filter: drop-shadow(0 2px 12px rgba(255, 123, 0, 0.35));
 }
 
 .text-glow {
@@ -720,6 +720,26 @@ h1, h2, h3, h4, h5, h6 {
     height: 32px;
 }
 
+/* Custom Mystery 6th Niche Card */
+.niche-custom-mystery {
+    background: linear-gradient(145deg, rgba(6, 7, 20, 0.95) 0%, rgba(49, 32, 216, 0.25) 100%);
+    border: 2px dashed rgba(79, 57, 246, 0.75);
+    box-shadow: 0 0 20px rgba(49, 32, 216, 0.2);
+}
+
+.niche-custom-mystery:hover {
+    border-style: solid;
+    border-color: #6e5eff;
+    box-shadow: 0 0 35px rgba(79, 57, 246, 0.4);
+}
+
+.niche-icon-container.mystery-icon {
+    border-color: #6e5eff;
+    color: #6e5eff;
+    background: rgba(49, 32, 216, 0.2);
+    box-shadow: 0 0 15px rgba(79, 57, 246, 0.35);
+}
+
 .niche-title {
     font-size: 1.25rem;
     font-weight: 700;
@@ -971,10 +991,122 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(180deg, #03030d 0%, #060618 50%, #03030d 100%);
 }
 
+/* --- Case Carousel Viewport & Track --- */
+.case-carousel-viewport {
+    width: calc(100% + 180px);
+    margin-left: -90px;
+    margin-right: -90px;
+    overflow: hidden;
+    position: relative;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.case-carousel-viewport:active,
+.case-carousel-viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.case-carousel-viewport.is-dragging .case-carousel-track {
+    transition: none !important;
+}
+
+.case-carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.case-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 90px;
+}
+
+/* Controls below slides */
+.case-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 48px;
+}
+
+.case-carousel-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(10, 12, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.case-carousel-arrow svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease;
+}
+
+.case-carousel-arrow:hover {
+    background: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+    color: #03030d;
+    box-shadow: 0 0 20px rgba(49, 32, 216, 0.5);
+}
+
+.case-carousel-arrow.case-prev-btn:hover svg {
+    transform: translateX(-3px);
+}
+
+.case-carousel-arrow.case-next-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.case-carousel-pagination {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.case-page-num {
+    background: rgba(10, 12, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.case-page-num:hover {
+    color: var(--text-white);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.case-page-num.active {
+    background: rgba(49, 32, 216, 0.25);
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(49, 32, 216, 0.35);
+}
+
 .case-wrapper {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 64px;
+    gap: 80px;
     align-items: center;
 }
 
@@ -1020,9 +1152,9 @@ h1, h2, h3, h4, h5, h6 {
 .achieve-icon {
     width: 24px;
     height: 24px;
-    background: rgba(49, 32, 216, 0.15);
-    border: 1px solid var(--neon-green);
-    color: var(--neon-green);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid currentColor;
+    color: currentColor;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1031,7 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8rem;
     flex-shrink: 0;
     margin-top: 2px;
-    box-shadow: 0 0 10px rgba(49, 32, 216, 0.2);
+    box-shadow: 0 0 10px currentColor;
 }
 
 .achieve-text {
@@ -1040,29 +1172,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .achieve-text strong {
-    color: var(--neon-cyan);
+    font-weight: 700;
 }
 
 .case-stats-row {
     display: flex;
-    gap: 40px;
+    gap: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 32px;
+    align-items: stretch;
+}
+
+.case-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
 }
 
 .case-stat-val {
     font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     font-weight: 900;
     color: var(--neon-cyan);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }
 
 .case-stat-lbl {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-top: auto;
 }
 
 .case-visual {
@@ -1133,9 +1276,9 @@ h1, h2, h3, h4, h5, h6 {
 .tag-status {
     width: 6px;
     height: 6px;
-    background-color: var(--neon-green);
+    background-color: var(--neon-cyan);
     border-radius: 50%;
-    box-shadow: 0 0 8px var(--neon-green);
+    box-shadow: 0 0 8px var(--neon-cyan);
     display: inline-block;
 }
 
@@ -1163,6 +1306,149 @@ h1, h2, h3, h4, h5, h6 {
 .bg-purple-glow {
     background-color: #a855f7 !important;
     box-shadow: 0 0 10px #a855f7 !important;
+}
+
+.text-gradient-magenta {
+    background: linear-gradient(135deg, #d946ef 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(217, 70, 239, 0.3));
+}
+
+.text-magenta {
+    color: #d946ef;
+    text-shadow: 0 0 8px rgba(217, 70, 239, 0.35);
+}
+
+.bg-magenta {
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.25) 0%, transparent 70%) !important;
+}
+
+.bg-magenta-glow {
+    background-color: #d946ef !important;
+    box-shadow: 0 0 10px #d946ef !important;
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(34, 197, 94, 0.3));
+}
+
+.text-green {
+    color: #22c55e;
+    text-shadow: 0 0 8px rgba(34, 197, 94, 0.35);
+}
+
+.bg-green {
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%) !important;
+}
+
+.bg-green-glow {
+    background-color: #22c55e !important;
+    box-shadow: 0 0 10px #22c55e !important;
+}
+
+.text-gradient-lime-blue {
+    background: linear-gradient(135deg, #a3e635 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(163, 230, 53, 0.3));
+}
+
+.text-lime {
+    color: #a3e635;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.35);
+}
+
+.bg-lime-glow {
+    background-color: #a3e635 !important;
+    box-shadow: 0 0 10px #a3e635 !important;
+}
+
+.text-gradient-electric-blue {
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.3));
+}
+
+.text-cyan {
+    color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
+}
+
+.bg-cyan {
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%) !important;
+}
+
+.bg-cyan-glow {
+    background-color: #38bdf8 !important;
+    box-shadow: 0 0 10px #38bdf8 !important;
+}
+
+.text-gradient-blue-purple {
+    background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.3));
+}
+
+.text-gradient-purple-gold {
+    background: linear-gradient(135deg, #c084fc 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(251, 191, 36, 0.3));
+}
+
+.text-gold {
+    color: #fbbf24;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.35);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #f59e0b 0%, #fef08a 50%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(245, 158, 11, 0.35));
+}
+
+.bg-gold {
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, transparent 70%) !important;
+}
+
+.bg-gold-glow {
+    background-color: #fbbf24 !important;
+    box-shadow: 0 0 10px #fbbf24 !important;
+}
+
+.text-gradient-cyan-pink {
+    background: linear-gradient(135deg, #06b6d4 0%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(6, 182, 212, 0.3));
+}
+
+.text-gradient-orange {
+    background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 10px rgba(234, 88, 12, 0.3));
+}
+
+.text-orange {
+    color: #f97316;
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.35);
+}
+
+.bg-orange {
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.25) 0%, transparent 70%) !important;
+}
+
+.bg-orange-glow {
+    background-color: #f97316 !important;
+    box-shadow: 0 0 10px #f97316 !important;
 }
 
 /* --- Cyber Arena STORM Dual Case Tabs --- */
@@ -1766,6 +2052,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95rem;
     }
     
+    .case-carousel-viewport {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    
+    .case-slide {
+        padding: 0 20px;
+    }
+
     .case-title {
         font-size: 1.6rem;
     }

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollSequence();
     initStormTabs();
+    initCaseCarousel();
 });
 
 /* ==========================================
@@ -382,6 +383,21 @@ function initNicheModal() {
     modalClose.addEventListener('click', closeModal);
     modalOverlay.addEventListener('click', closeModal);
     
+    // Smooth scroll to anchor links inside modal
+    modalBody.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href^="#"]');
+        if (link) {
+            closeModal();
+            const targetId = link.getAttribute('href');
+            const targetElem = document.querySelector(targetId);
+            if (targetElem) {
+                setTimeout(() => {
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    });
+
     // Close on Escape key press
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
@@ -596,17 +612,15 @@ function initScrollSequence() {
     const heroSection = document.getElementById('hero');
     if (!heroSection) return;
     
-    const frameCount = 81; // Total frames in sequence (109240 to 109320)
-    const startFrame = 109240; // Starting frame number in the files
+    const frameCount = 81; // Total frames in sequence (00000 to 00080)
     const images = [];
     let loadedCount = 0;
     let sequenceActive = false;
     
-    // Configurable sequence naming and path
-    // Naming convention: Gorky_Digital_[0040-0120].exr Render_109240.jpg etc.
+    // Naming convention: Gorky_Digital_00000.jpg to Gorky_Digital_00080.jpg
     const getFrameUrl = (index) => {
-        const fileNum = startFrame + index - 1;
-        return `assets/sequence/Gorky_Digital_[0040-0120].exr Render_${fileNum}.jpg`;
+        const frameNum = (index - 1).toString().padStart(5, '0');
+        return `assets/sequence/Gorky_Digital_${frameNum}.jpg`;
     };
     
     // Preload all frames
@@ -729,6 +743,144 @@ function initStormTabs() {
         });
     });
 }
+
+/* ==========================================
+   CASE CAROUSEL (LIVE DRAG, SWIPE & IMPACT)
+   ========================================== */
+function initCaseCarousel() {
+    const viewport = document.querySelector('.case-carousel-viewport');
+    const track = document.querySelector('.case-carousel-track');
+    const slides = document.querySelectorAll('.case-slide');
+    const prevBtn = document.querySelector('.case-prev-btn');
+    const nextBtn = document.querySelector('.case-next-btn');
+    const pageBtns = document.querySelectorAll('.case-page-num');
+
+    if (!viewport || !track || !slides.length) return;
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    let isDragging = false;
+    let startX = 0;
+    let dragDeltaX = 0;
+    let startTime = 0;
+
+    // Prevent native image dragging inside carousel
+    viewport.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+
+    function goToSlide(index, animate = true) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        
+        currentIndex = index;
+
+        if (animate) {
+            track.style.transition = 'transform 0.45s cubic-bezier(0.18, 0.89, 0.32, 1.15)';
+        } else {
+            track.style.transition = 'none';
+        }
+
+        const offsetPercentage = -currentIndex * 100;
+        track.style.transform = `translate3d(${offsetPercentage}%, 0, 0)`;
+        
+        pageBtns.forEach((btn, idx) => {
+            btn.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    pageBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const slideIndex = parseInt(btn.getAttribute('data-slide'), 10);
+            if (!isNaN(slideIndex)) goToSlide(slideIndex);
+        });
+    });
+
+    // Start Drag / Touch
+    function startDrag(posX) {
+        isDragging = true;
+        startX = posX;
+        dragDeltaX = 0;
+        startTime = Date.now();
+        track.style.transition = 'none';
+        viewport.classList.add('is-dragging');
+    }
+
+    // Move Drag / Touch
+    function moveDrag(posX) {
+        if (!isDragging) return;
+        dragDeltaX = posX - startX;
+
+        // Apply resistance if dragging past bounds
+        if ((currentIndex === 0 && dragDeltaX > 0) || (currentIndex === totalSlides - 1 && dragDeltaX < 0)) {
+            dragDeltaX *= 0.35; // Rubber band resistance
+        }
+
+        const viewportWidth = viewport.clientWidth || 1000;
+        const currentTranslatePx = -currentIndex * viewportWidth;
+        const targetTranslatePx = currentTranslatePx + dragDeltaX;
+
+        track.style.transform = `translate3d(${targetTranslatePx}px, 0, 0)`;
+    }
+
+    // End Drag / Touch (Calculate Impact / Flick Velocity)
+    function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        viewport.classList.remove('is-dragging');
+
+        const duration = Math.max(1, Date.now() - startTime);
+        const velocity = Math.abs(dragDeltaX) / duration; // px per ms
+
+        const viewportWidth = viewport.clientWidth || 1000;
+        const threshold = Math.min(120, viewportWidth * 0.2);
+
+        if (Math.abs(dragDeltaX) > threshold || velocity > 0.35) {
+            if (dragDeltaX < 0) {
+                goToSlide(currentIndex + 1, true);
+            } else if (dragDeltaX > 0) {
+                goToSlide(currentIndex - 1, true);
+            } else {
+                goToSlide(currentIndex, true);
+            }
+        } else {
+            // Spring back to current slide
+            goToSlide(currentIndex, true);
+        }
+
+        dragDeltaX = 0;
+    }
+
+    // Touch listeners
+    viewport.addEventListener('touchstart', (e) => {
+        startDrag(e.touches[0].clientX);
+    }, { passive: true });
+
+    viewport.addEventListener('touchmove', (e) => {
+        moveDrag(e.touches[0].clientX);
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', endDrag);
+    viewport.addEventListener('touchcancel', endDrag);
+
+    // Mouse listeners
+    viewport.addEventListener('mousedown', (e) => {
+        startDrag(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (isDragging) moveDrag(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (isDragging) endDrag();
+    });
+}
+
 
 
 

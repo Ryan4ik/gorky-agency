@@ -20,7 +20,8 @@ try {
         # Build local path
         if ($url.StartsWith("/assets/sequence/")) {
             $fileName = $url.Substring(17).Replace('/', '\')
-            $localPath = Join-Path "C:\ShowREEL\gorky jpg" $fileName
+            $seqDir = (Get-Item "D:\*\*\SMM\Gorky Games\3d\JPG").FullName
+            $localPath = Join-Path $seqDir $fileName
         } else {
             $localPath = Join-Path "C:\Users\Taron_HOME\.gemini\antigravity\scratch\gorky-agency" $url.Replace('/', '\').TrimStart('\')
         }

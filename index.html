@@ -37,8 +37,8 @@
                 <a href="#hero" class="nav-link">О нас</a>
                 <a href="#niches" class="nav-link">Направления</a>
                 <a href="#case" class="nav-link">Кейсы</a>
-                <a href="#news" class="nav-link">Блог</a>
                 <a href="#contact" class="nav-link">Контакты</a>
+                <a href="#news" class="nav-link">Блог</a>
             </nav>
             
             <a href="#contact" class="btn btn-outline btn-nav-cta">Начать проект</a>
@@ -56,8 +56,8 @@
         <a href="#hero" class="mobile-link">О нас</a>
         <a href="#niches" class="mobile-link">Направления</a>
         <a href="#case" class="mobile-link">Кейсы</a>
-        <a href="#news" class="mobile-link">Блог</a>
         <a href="#contact" class="mobile-link">Контакты</a>
+        <a href="#news" class="mobile-link">Блог</a>
         <a href="#contact" class="btn btn-primary mobile-cta">Начать проект</a>
     </div>
 
@@ -299,6 +299,29 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Card 6: Своя сфера / Ваша ниша (Закрытое направление) -->
+                    <div class="niche-card niche-custom-mystery" data-niche="custom-mystery">
+                        <div class="card-border-glow"></div>
+                        <div class="card-content">
+                            <div class="niche-icon-container mystery-icon">
+                                <svg class="niche-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                </svg>
+                            </div>
+                            <h3 class="niche-title">Своя сфера / Ваша ниша</h3>
+                            <p class="niche-short">Мы всегда открыты ко всему новому! Вы можете предложить нам свой бизнес и сферу — мы разработаем индивидуальную маркетинговую стратегию под вас.</p>
+                            <span class="btn-more">Предложить проект <span class="arrow-icon">→</span></span>
+                            
+                            <div class="card-detail-content">
+                                <h4>Индивидуальная стратегия под вашу сферу:</h4>
+                                <p style="color: var(--text-white); margin-bottom: 24px; line-height: 1.6;">У вас уникальный проект или новая нетипичная ниша? Наша команда проведет полный анализ рынка и целевой аудитории, подберет выигрышные связки и выстроит результативную воронку продаж специально под ваши задачи.</p>
+                                <a href="#contact" class="btn btn-primary modal-contact-btn" style="width: 100%; justify-content: center; padding: 14px;">Предложить проект <span class="arrow-icon">→</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -315,141 +338,967 @@
             </div>
         </div>
 
-        <!-- Case Study Section (Anonymized) -->
+        <!-- Case Study Section (Carousel) -->
         <section class="case-section" id="case">
             <div class="container">
-                <div class="case-wrapper">
-                    <div class="case-info">
-                        <div class="case-badge">НАША ГОРДОСТЬ / КЕЙС</div>
-                        <h2 class="case-title">СЕТЬ КОМПЬЮТЕРНЫХ КЛУБОВ <span class="text-gradient-orange-blue">ТОП-1 В РФ</span> ПО ТЕМПАМ РОСТА</h2>
-                        <p class="case-desc">
-                            За 3 года плотной работы под ключ наша команда развила проект с нуля до одной из крупнейших корпоративных сетей компьютерных клубов в России с узнаваемым стилем. Мы выстроили единую автоматизированную систему маркетинга, доказавшую свою эффективность.
-                        </p>
-                        
-                        <div class="case-achievements">
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon">✓</div>
-                                <div class="achieve-text">
-                                    <strong>70+ клубов</strong>, с которыми мы успешно работали по всей территории РФ
+                <div class="case-carousel-viewport">
+                    <div class="case-carousel-track">
+                        <!-- Slide 1: Network #1 Case -->
+                        <div class="case-slide" data-slide-index="0">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-orange">НАША ГОРДОСТЬ / КЕЙС</div>
+                                    <h2 class="case-title">СЕТЬ КОМПЬЮТЕРНЫХ КЛУБОВ <span class="text-gradient-orange-blue">ТОП-1 В РФ</span> ПО ТЕМПАМ РОСТА</h2>
+                                    <p class="case-desc">
+                                        За 3 года плотной работы под ключ наша команда развила проект с нуля до одной из крупнейших корпоративных сетей компьютерных клубов в России с узнаваемым стилем. Мы выстроили единую автоматизированную систему маркетинга, доказавшую свою эффективность.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">70+ клубов</strong>, с которыми мы успешно работали по всей территории РФ
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">70+ сообществ</strong> в социальных сетях, автоматизированный постинг по всей сети
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">Бренд, который запомнили</strong>: созданы узнаваемый маскот и фирменная стилистика
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">3 года</div>
+                                            <div class="case-stat-lbl">Сотрудничества</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">70+</div>
+                                            <div class="case-stat-lbl">Локаций сети</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">№1</div>
+                                            <div class="case-stat-lbl">По темпам роста</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon">✓</div>
-                                <div class="achieve-text">
-                                    <strong>70+ сообществ</strong> в социальных сетях, автоматизированный постинг по всей сети
-                                </div>
-                            </div>
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon">✓</div>
-                                <div class="achieve-text">
-                                    <strong>Бренд, который запомнили</strong>: созданы узнаваемый маскот и фирменная стилистика
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/network_one_case_new.png" alt="Компьютерный клуб топ-1 в РФ" class="case-image">
+                                        <div class="case-img-glow bg-orange"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-orange-glow"></span>
+                                        <span>ONLINE | КЕЙС: СЕТЬ КЛУБОВ №1</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="case-stats-row">
-                            <div class="case-stat">
-                                <div class="case-stat-val">3 года</div>
-                                <div class="case-stat-lbl">Сотрудничества</div>
-                            </div>
-                            <div class="case-stat">
-                                <div class="case-stat-val">70+</div>
-                                <div class="case-stat-lbl">Локаций сети</div>
-                            </div>
-                            <div class="case-stat">
-                                <div class="case-stat-val">№1</div>
-                                <div class="case-stat-lbl">По темпам роста</div>
+
+                        <!-- Slide 2: Cyber Arena STORM Case -->
+                        <div class="case-slide" data-slide-index="1">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual storm-visual-container">
+                                    <div class="storm-tabs">
+                                        <button type="button" class="storm-tab-btn" data-storm-tab="old">
+                                            <span class="tab-dot purple"></span> БЫЛО (2024) — SMM
+                                        </button>
+                                        <button type="button" class="storm-tab-btn active" data-storm-tab="new">
+                                            <span class="tab-dot gold"></span> СТАЛО (2025) — Ребрендинг
+                                        </button>
+                                    </div>
+
+                                    <div class="storm-tab-content active" id="storm-tab-new">
+                                        <div class="case-image-wrapper">
+                                            <img src="assets/storm_new_case.jpg" alt="Cyber Arena STORM Ребрендинг 2025 (Стало)" class="case-image">
+                                            <div class="case-img-glow bg-gold"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="storm-tab-content" id="storm-tab-old">
+                                        <div class="case-image-wrapper">
+                                            <img src="assets/storm_case.jpg" alt="Cyber Arena STORM SMM 2024 (Было)" class="case-image">
+                                            <div class="case-img-glow bg-purple"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-gold-glow"></span>
+                                        <span>ACTIVE | КЕЙС: CYBER ARENA STORM</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-gold">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">СЕТЬ КОМПЬЮТЕРНЫХ КЛУБОВ <span class="text-gradient-gold">CYBER ARENA STORM</span></h2>
+                                    <p class="case-desc">
+                                        Комплексное маркетинговое сопровождение и ребрендинг сети. С 2024 года мы вели SMM-маркетинг и таргет для клубов, а в 2025 разработали эксклюзивный темный стиль для сочинского филиала — от логотипа до UI софта и вывесок.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">SMM & Трафик (2024)</strong>: аудит сети, рубрикатор контента, вовлекающий SMM (геймификация, рейтинги активности, акции) и эффективный таргет в VK/Яндекс.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">Премиум-ребрендинг (2025)</strong>: строгий минимализм с акцентами металлика и неонового света. Оформление соцсетей, софта, заставок ПО, вывесок и навигации для клуба в Сочи.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">Рост лояльности & Поддержка 24/7</strong>: атмосфера «премиум-лаунджа» увеличила средний чек. Непрерывный контакт в рабочих чатах и еженедельные планерки.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">2024-2025</div>
+                                            <div class="case-stat-lbl">Было / Стало</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">360°</div>
+                                            <div class="case-stat-lbl">SMM + Дизайн</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">24/7</div>
+                                            <div class="case-stat-lbl">Связь</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="case-visual">
-                        <div class="case-image-wrapper">
-                            <img src="assets/network_one_case_new.png" alt="Компьютерный клуб топ-1 в РФ" class="case-image">
-                            <div class="case-img-glow"></div>
+
+                        <!-- Slide 3: Computer Club LVL Case -->
+                        <div class="case-slide" data-slide-index="2">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-magenta">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КОМПЬЮТЕРНЫЙ КЛУБ <span class="text-gradient-magenta">LVL (СТАРЫЙ ОСКОЛ)</span></h2>
+                                    <p class="case-desc">
+                                        Комплексный запуск и продвижение клуба одновременно в VK и Telegram за 2 месяца. Оформление по брендбуку, выверенная акция с iPhone, полностью окупившая затраты, и графические макеты для ТВ и экранов ресепшена.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-magenta">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-magenta">Монетизируемый розыгрыш iPhone</strong>: условие участия по чеку от 1 500 ₽ (83 чека) полностью окупает покупку смартфона и таргет, обеспечивая 100% ROI.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-magenta">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-magenta">Результаты в VK Рекламе</strong>: 2 575 кликов, 1 017 новых целевых подписчиков по 63.6 ₽ и 123 900 просмотров рекламных промо-постов.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-magenta">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-magenta">Успех в Telegram & ТВ-дизайн</strong>: 1 036 подписчиков в TG (1k+ просмотров/пост) + разработка айдентики под экраны ресепшен, ТВ, карты и соцсети.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-magenta">2 050+</div>
+                                            <div class="case-stat-lbl">Подписчиков VK+TG</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-magenta">100%</div>
+                                            <div class="case-stat-lbl">Окупаемость акции</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-magenta">123K+</div>
+                                            <div class="case-stat-lbl">Охват рекламы</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/lvl_case.jpg" alt="Оформление группы компьютерного клуба LVL Старый Оскол" class="case-image">
+                                        <div class="case-img-glow bg-magenta"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-magenta-glow"></span>
+                                        <span>ACTIVE | КЕЙС: КИБЕРКЛУБ LVL</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="case-overlay-tag">
-                            <span class="tag-status"></span>
-                            <span>ONLINE | КЕЙС: СЕТЬ КЛУБОВ №1</span>
+
+                        <!-- Slide 4: STRIKE ARENA Case -->
+                        <div class="case-slide" data-slide-index="3">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/strike_arena_case.jpg" alt="Оформление группы STRIKE ARENA Екатеринбург" class="case-image">
+                                        <div class="case-img-glow bg-green"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-green-glow"></span>
+                                        <span>ACTIVE | КЕЙС: STRIKE ARENA</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-green">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">ИГРОВОЕ ПРОСТРАНСТВО <span class="text-gradient-green">STRIKE ARENA (ЕКАТЕРИНБУРГ)</span></h2>
+                                    <p class="case-desc">
+                                        Разработка фирменной неоново-зеленой айдентики и медиаупаковки сообщества для киберклуба STRIKE ARENA в Екатеринбурге. Создание динамического кибер-маскота, брендинг баннеров и интерактивные форматы постов.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Футуристичная неоновая айдентика</strong>: ярко-зеленый стилизованный маскот, ретро-мониторы, меню услуг, товаров и тарифных сеток для соцсетей 24/7.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Интерактивные механики вовлечения</strong>: разработка постов с опросами гостей, сбором идей в комментариях и оформление спецпредложений барной зоны.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Рост узнаваемости & CTR</strong>: узнаваемый контрастный стиль выделил локацию на Комсомольской среди клубов города и повысил кликабельность рекламы.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">ЕКБ</div>
+                                            <div class="case-stat-lbl">Екатеринбург</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">24/7</div>
+                                            <div class="case-stat-lbl">Режим работы</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">Neon UI</div>
+                                            <div class="case-stat-lbl">Дизайн-система</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: WSG Wall Street Gaming Case -->
+                        <div class="case-slide" data-slide-index="4">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-lime">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КИБЕР ЛАБОРАТОРИЯ <span class="text-gradient-lime-blue">WSG (ЛИПЕЦК)</span></h2>
+                                    <p class="case-desc">
+                                        Долгосрочный контент-маркетинг и SMM-сопровождение киберклуба Wall Street Gaming с ноября 2024 года. Разработка «street art» стиля, рейтинга активности, VK-клипов, полиграфии и регулярного таргета.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Стрит-арт айдентика & Полиграфия</strong>: сочный сине-зеленый неоновый стиль, брендинг Faceit и обоев ПК, листовки и макеты тейблтентов под локальные акции.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Вовлекающий SMM & Клипы</strong>: запуск автоматического рейтинга активности в VK, съемка клипов от администраторов и живые обзоры интерьера залов.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Точечный таргет в VK</strong>: 918 целевых переходов со средним CTR 1.13% и 254 подписки по 86 ₽ всего за 2 недели рекламного запуска.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">2024-2026</div>
+                                            <div class="case-stat-lbl">Сроки работы</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">Street Art</div>
+                                            <div class="case-stat-lbl">Стиль бренда</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">1.13%</div>
+                                            <div class="case-stat-lbl">CTR рекламы</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/wsg_case.jpg" alt="Оформление группы киберклуба WSG Липецк" class="case-image">
+                                        <div class="case-img-glow bg-green"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-lime-glow"></span>
+                                        <span>ACTIVE | КЕЙС: WSG GAMING</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6: PROXIMA Case -->
+                        <div class="case-slide" data-slide-index="5">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/proxima_case.jpg" alt="Оформление группы компьютерного клуба ПРОКСИМА Краснодар" class="case-image">
+                                        <div class="case-img-glow bg-purple"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-purple-glow"></span>
+                                        <span>ACTIVE | КЕЙС: КИБЕРКЛУБ ПРОКСИМА</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-violet">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КОМПЬЮТЕРНЫЙ КЛУБ <span class="text-gradient-purple-pink">ПРОКСИМА (КРАСНОДАР)</span></h2>
+                                    <p class="case-desc">
+                                        Разработка космической концепции брендинга и визуала для компьютерного клуба в Краснодаре. Мистический каллиграфический стиль, нейросетевая генерация сай-фай персонажей и промо-макеты акций.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-violet">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-violet">Космический сеттинг & AI Персонажи</strong>: уникальная генерация кибер-космонавтов и роботов, передающая атмосферу экзопланеты «Проксима Центавра».
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-violet">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-violet">Мистическая каллиграфия</strong>: сочетание каллиграфических готических вязей с ультрафиолетовым свечением в точности с интерьером клуба.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-violet">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-violet">Упаковка соцсетей & Кэшбек</strong>: оформление обложки (Атарбекова 5/1), кэшбек-акций, бонуса 150 ₽ новым гостям и стилизованных иконок меню.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-violet">Краснодар</div>
+                                            <div class="case-stat-lbl">Атарбекова 5/1</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-violet">AI Style</div>
+                                            <div class="case-stat-lbl">Нейродизайн</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-violet">24/7</div>
+                                            <div class="case-stat-lbl">Круглосуточно</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 7: WEZION Case -->
+                        <div class="case-slide" data-slide-index="6">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-green">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КОМПЬЮТЕРНЫЙ КЛУБ <span class="text-gradient-green">WEZION (ТОМСК)</span></h2>
+                                    <p class="case-desc">
+                                        6 месяцев эффективного SMM-продвижения (май – ноябрь 2024) с небольшим бюджетом для клуба в ТРЦ «Изумрудный Город». Обновление оформления группы, фото-видео контент и таргет.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Высокая окупаемость рекламы</strong>: привлечение 673 новых подписчиков по средней цене 74 ₽ при общем бюджете всего 50 000 ₽ за полгода работы.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Лайм-неоновый киберстиль</strong>: оформление обложки (ТРЦ «Изумрудный Город»), иконок, спецпредложений ночного пакета и подарочных акций «2 часа игры».
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Фото & Видео продакшн</strong>: съемка интерьера и атмосферы залов, запуск динамических роликов и вовлечение аудитории.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">673</div>
+                                            <div class="case-stat-lbl">Подписчика VK</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">74 ₽</div>
+                                            <div class="case-stat-lbl">Цена подписки</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">50 000 ₽</div>
+                                            <div class="case-stat-lbl">Бюджет (6 мес)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/wezion_case.jpg" alt="Оформление группы компьютерного клуба WEZION Томск" class="case-image">
+                                        <div class="case-img-glow bg-green"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-green-glow"></span>
+                                        <span>ACTIVE | КЕЙС: КИБЕРКЛУБ WEZION</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 8: FeelFree Case -->
+                        <div class="case-slide" data-slide-index="7">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/feelfree_case.jpg" alt="Оформление группы компьютерного клуба FeelFree Липецк" class="case-image">
+                                        <div class="case-img-glow bg-cyan"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-cyan-glow"></span>
+                                        <span>ACTIVE | КЕЙС: FEELFREE GAMING</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-cyan">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КОМПЬЮТЕРНЫЙ КЛУБ <span class="text-gradient-electric-blue">FEELFREE (ЛИПЕЦК)</span></h2>
+                                    <p class="case-desc">
+                                        Разработка фирменного электрик-синего стиля и контент-сопровождение клуба FeelFree на пл. Горшкова. Тестирование гипотез ЦА, дизайн меню, организация праздничных акций и турниров.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Электрик-синяя айдентика & Упаковка</strong>: стиль с персонажами Valorant и Dota 2, обложка (пл. Горшкова 1), иконки меню «Цены», «Акции», «Железо», «Фото».
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Анализ ЦА & Вовлекающий контент</strong>: проведение тестов офферов, запуск сезонных акций (скидки к 8 Марта) и регулярных турниров FC24 / Dota 2 1x1 Mid.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Анонс открытия & Розыгрыши</strong>: крупная промо-кампания открытия нового клуба с призовым фондом 300 часов игрового баланса.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">Липецк</div>
+                                            <div class="case-stat-lbl">пл. Горшкова 1</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">300 ч</div>
+                                            <div class="case-stat-lbl">Призовой фонд</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">24/7</div>
+                                            <div class="case-stat-lbl">Режим работы</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 9: VR ARENA Case -->
+                        <div class="case-slide" data-slide-index="8">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-cyan">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КЛУБ VR-РЕАЛЬНОСТИ <span class="text-gradient-blue-purple">VR ARENA (КРАСНОДАР)</span></h2>
+                                    <p class="case-desc">
+                                        Разработка фирменного визуального стиля и 3D-графики с нуля за 3 календарных дня. Интеграция плавной градиентной гаммы голубого и фиолетового цветов для арены виртуальной реальности.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Экспресс-брендинг за 3 дня</strong>: разработка оригинальной дизайн-системы, обложки и шаблонов карточек меню в рекордно сжатые сроки.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Уникальный 3D-пак элементов</strong>: моделирование 3D VR-очков, геймпадов, молний и наград для оформления постов и навигации.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Градиентная палитра погружения</strong>: бесшовное решение спора цветов — сочетание ультрафиолета и голубого неонового свечения.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">3 Дня</div>
+                                            <div class="case-stat-lbl">Срок разработки</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">3D UI</div>
+                                            <div class="case-stat-lbl">Кастомный пак</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">VR Tech</div>
+                                            <div class="case-stat-lbl">Айдентика арены</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/vr_arena_case.jpg" alt="Оформление группы VR ARENA Краснодар" class="case-image">
+                                        <div class="case-img-glow bg-cyan"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-cyan-glow"></span>
+                                        <span>ACTIVE | КЕЙС: VR ARENA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 10: METAFORCE Case -->
+                        <div class="case-slide" data-slide-index="9">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/metaforce_case.jpg" alt="Оформление группы сети VR клубов METAFORCE" class="case-image">
+                                        <div class="case-img-glow bg-purple"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-gold-glow"></span>
+                                        <span>ACTIVE | КЕЙС: METAFORCE VR</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-gold">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">СЕТЬ VR-АРЕН <span class="text-gradient-purple-gold">METAFORCE (3 ЛОКАЦИИ)</span></h2>
+                                    <p class="case-desc">
+                                        Упаковка брендинга сети VR-клубов METAFORCE в крупных ТРЦ («Гринвич», «Фан Фан», «Мега»). Разработка 3D-деталей, адаптация интерьерной стилистики и шаблонов постов за 3 дня.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">Интерьерный 3D-брендинг за 3 дня</strong>: глубокий фиолетовый UI с золотыми элементами, точно отражающий премиальную атмосферу арены в 3 ТРЦ.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">Кастомные 3D-объекты & Иконки</strong>: моделирование золотых VR-очков, монеток, шляпы фокусника и наград под сертификаты и подборки.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-gold">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-gold">Обзоры VR-симуляторов</strong>: оформление публикаций под топовые VR-игры (Creed: RTG, бокс, турниры) и командные турниры на выходных.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">3 ТРЦ</div>
+                                            <div class="case-stat-lbl">Гринвич/ФанФан/Мега</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">3 Дня</div>
+                                            <div class="case-stat-lbl">Срок разработки</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-gold">3D Gold</div>
+                                            <div class="case-stat-lbl">Фирменный стиль</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 11: DOGONI Karting Case -->
+                        <div class="case-slide" data-slide-index="10">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-cyan">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">КАРТИНГ-ЦЕНТР <span class="text-cyan">ДОГОНИ (СИМФЕРОПОЛЬ)</span></h2>
+                                    <p class="case-desc">
+                                        Запуск маркетинга и привлечение клиентов с нуля за 1 месяц (август – сентябрь 2023). Создание фирменной стилистики, POS-материалов, чат-бот конкурсов с партнерами и 139 прямо записавшихся на заезды.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Дизайн & Упаковка с нуля</strong>: разработка гоночной бирюзово-неоновой айдентики, оформление группы VK и печатной POS-полиграфии для картинга.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Коллаборации & Чат-бот геймификация</strong>: совместный конкурс с партнерами (батутный центр + барбершоп) с автоматизированным сбором активности ботом.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-cyan">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-cyan">Прямые записи из VK Рекламы</strong>: 139 подтвержденных бронирований заездов из рекламы и 476 целевых подписчиков всего за 1 месяц.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">139</div>
+                                            <div class="case-stat-lbl">Записей из рекламы</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">476</div>
+                                            <div class="case-stat-lbl">Подписчиков (1 мес)</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-cyan">1 Месяц</div>
+                                            <div class="case-stat-lbl">Срок запуска</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/dogoni_case.jpg" alt="Оформление группы картинга ДОГОНИ Симферополь" class="case-image">
+                                        <div class="case-img-glow bg-cyan"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-cyan-glow"></span>
+                                        <span>ACTIVE | КЕЙС: КАРТИНГ ДОГОНИ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 12: Battle for Life Mobile Game Case -->
+                        <div class="case-slide" data-slide-index="11">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/battle_life_case.jpg" alt="Продвижение мобильной игры Battle for life" class="case-image">
+                                        <div class="case-img-glow bg-green"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-green-glow"></span>
+                                        <span>ACTIVE | КЕЙС: BATTLE FOR LIFE</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-green">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">МОБИЛЬНАЯ ИГРА <span class="text-gradient-green">BATTLE FOR LIFE</span></h2>
+                                    <p class="case-desc">
+                                        Запуск таргетированной рекламы и промо-видеопродакшна для мобильной игры за 2 недели. Анализ и сегментация ЦА, видеомонтаж баннеров, таргет в VK Реклама и Яндекс.Директ.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">7 000+ Игроков за 2 недели</strong>: 3 943 прямых установки игры из VK Реклама по выгодной стоимости 20–40 ₽ за скачивание.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Анализ ЦА & Ключевые слова</strong>: выявление ядра аудитории (мужчины 35-45 лет, фанаты RPG и военных стратегий) через Яндекс.Метрику и ключевые запросы.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-green">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-green">Видеомонтаж & Баннеры</strong>: производство конверсионных видеороликов и рекламных промо-креативов, обеспечивших 14 880 переходов.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">7 000+</div>
+                                            <div class="case-stat-lbl">Новых игроков</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">20-40 ₽</div>
+                                            <div class="case-stat-lbl">Цена установки CPI</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-green">14.8K</div>
+                                            <div class="case-stat-lbl">Кликов в рекламе</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 13: Petlya Vremeni Case -->
+                        <div class="case-slide" data-slide-index="12">
+                            <div class="case-wrapper">
+                                <div class="case-info">
+                                    <div class="case-badge text-orange">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">ТАЙМ-КАФЕ <span class="text-gradient-orange">ПЕТЛЯ ВРЕМЕНИ (Н.НОВГОРОД)</span></h2>
+                                    <p class="case-desc">
+                                        Упаковка айдентики и маркетинг технического/официального открытия антикафе и клуба настольных игр за 2 месяца (август – сентябрь 2025). Разработка комикс-стилистики, POS-материалов, прогревающего таргета и ивента открытия.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">Теплый комикс-стиль & POS</strong>: создание фирменного стиля в светлых оранжевых тонах, логотипа знак бесконечности, полиграфии и оформление пространства.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">Маркетинг открытия & 100+ гостей</strong>: разработка акционной программы технического старта, приведшей более 100 человек на праздник открытия.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-orange">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-orange">Быстрое формирование аудитории</strong>: +221 целевой подписчик по 91 ₽ при бюджете 20 157 ₽, обеспечивший постоянную заполняемость заведения с 1 месяца.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">100+ Гостей</div>
+                                            <div class="case-stat-lbl">На открытии</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">221</div>
+                                            <div class="case-stat-lbl">Подписчик VK</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-orange">20 157 ₽</div>
+                                            <div class="case-stat-lbl">Бюджет (2 мес)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/petlya_vremeni_case.jpg" alt="Оформление группы антикафе Петля времени Нижний Новгород" class="case-image">
+                                        <div class="case-img-glow bg-orange"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-orange-glow"></span>
+                                        <span>ACTIVE | КЕЙС: ПЕТЛЯ ВРЕМЕНИ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 14: FP-Store Apple Store Case -->
+                        <div class="case-slide" data-slide-index="13">
+                            <div class="case-wrapper reverse">
+                                <div class="case-visual">
+                                    <div class="case-image-wrapper">
+                                        <img src="assets/fpstore_case.jpg" alt="Маркетинг магазина техники Apple FP-store Нижний Новгород" class="case-image">
+                                        <div class="case-img-glow bg-green"></div>
+                                    </div>
+                                    <div class="case-overlay-tag">
+                                        <span class="tag-status bg-lime-glow"></span>
+                                        <span>ACTIVE | КЕЙС: FP-STORE APPLE</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-info">
+                                    <div class="case-badge text-lime">НАША РАБОТА / КЕЙС</div>
+                                    <h2 class="case-title">МАГАЗИН APPLE <span class="text-gradient-lime-blue">FP-STORE (Н.НОВГОРОД)</span></h2>
+                                    <p class="case-desc">
+                                        Комплексный ребрендинг и запуск сквозных воронок продаж для магазина оригинальной техники Apple. Разработка фирменной айдентики, чат-бота в VK, товарных кампаний в Яндекс.Директ и сквозной аналитики в AmoCRM.
+                                    </p>
+                                    
+                                    <div class="case-achievements">
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Ребрендинг & Премиум-упаковка</strong>: разработка контрастного стильного визуала, прайс-листов, печатной продукции и наружной рекламы, пробивающих баннерную слепоту.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Воронка в VK & Чат-бот прогрева</strong>: запуск автоматизированной воронки со сбором рассылочной базы клиентов и высокой конверсией реанимации повторных лидов.
+                                            </div>
+                                        </div>
+                                        <div class="case-achieve-item">
+                                            <div class="achieve-icon text-lime">✓</div>
+                                            <div class="achieve-text">
+                                                <strong class="text-lime">Товарный таргет в Яндекс.Директ</strong>: оформление товарных карточек и кликабельных плашек в РСЯ для привлечения прямого горячего трафика на сайт.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-stats-row">
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">+50% ROI</div>
+                                            <div class="case-stat-lbl">Рост с -32%</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">AmoCRM</div>
+                                            <div class="case-stat-lbl">Сквозная аналитика</div>
+                                        </div>
+                                        <div class="case-stat">
+                                            <div class="case-stat-val text-lime">Яндекс & VK</div>
+                                            <div class="case-stat-lbl">Чат-бот воронка</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="case-divider"></div>
-
-                <div class="case-wrapper reverse">
-                    <div class="case-visual storm-visual-container">
-                        <div class="storm-tabs">
-                            <button type="button" class="storm-tab-btn active" data-storm-tab="new">
-                                <span class="tab-dot gold"></span> СТАЛО (2025) — Ребрендинг
-                            </button>
-                            <button type="button" class="storm-tab-btn" data-storm-tab="old">
-                                <span class="tab-dot purple"></span> БЫЛО (2024) — SMM
-                            </button>
-                        </div>
-
-                        <div class="storm-tab-content active" id="storm-tab-new">
-                            <div class="case-image-wrapper">
-                                <img src="assets/storm_new_case.jpg" alt="Cyber Arena STORM Ребрендинг 2025 (Стало)" class="case-image">
-                                <div class="case-img-glow bg-gold"></div>
-                            </div>
-                        </div>
-
-                        <div class="storm-tab-content" id="storm-tab-old">
-                            <div class="case-image-wrapper">
-                                <img src="assets/storm_case.jpg" alt="Cyber Arena STORM SMM 2024 (Было)" class="case-image">
-                                <div class="case-img-glow bg-purple"></div>
-                            </div>
-                        </div>
-
-                        <div class="case-overlay-tag">
-                            <span class="tag-status bg-purple-glow"></span>
-                            <span>ACTIVE | КЕЙС: CYBER ARENA STORM</span>
-                        </div>
+                <!-- Carousel Controls (Arrows + Numbers) -->
+                <div class="case-carousel-controls">
+                    <button type="button" class="case-carousel-arrow case-prev-btn" aria-label="Предыдущий кейс">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    
+                    <div class="case-carousel-pagination">
+                        <button type="button" class="case-page-num active" data-slide="0">01</button>
+                        <button type="button" class="case-page-num" data-slide="1">02</button>
+                        <button type="button" class="case-page-num" data-slide="2">03</button>
+                        <button type="button" class="case-page-num" data-slide="3">04</button>
+                        <button type="button" class="case-page-num" data-slide="4">05</button>
+                        <button type="button" class="case-page-num" data-slide="5">06</button>
+                        <button type="button" class="case-page-num" data-slide="6">07</button>
+                        <button type="button" class="case-page-num" data-slide="7">08</button>
+                        <button type="button" class="case-page-num" data-slide="8">09</button>
+                        <button type="button" class="case-page-num" data-slide="9">10</button>
+                        <button type="button" class="case-page-num" data-slide="10">11</button>
+                        <button type="button" class="case-page-num" data-slide="11">12</button>
+                        <button type="button" class="case-page-num" data-slide="12">13</button>
+                        <button type="button" class="case-page-num" data-slide="13">14</button>
                     </div>
+                    
+                    <button type="button" class="case-carousel-arrow case-next-btn" aria-label="Следующий кейс">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
 
-                    <div class="case-info">
-                        <div class="case-badge text-violet">НАША РАБОТА / КЕЙС</div>
-                        <h2 class="case-title">СЕТЬ КОМПЬЮТЕРНЫХ КЛУБОВ <span class="text-gradient-purple-pink">CYBER ARENA STORM</span></h2>
-                        <p class="case-desc">
-                            Комплексное маркетинговое сопровождение и ребрендинг сети. С 2024 года мы вели SMM-маркетинг и таргет для клубов, а в 2025 разработали эксклюзивный темный стиль для сочинского филиала — от логотипа до UI софта и вывесок.
-                        </p>
-                        
-                        <div class="case-achievements">
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon text-violet">✓</div>
-                                <div class="achieve-text">
-                                    <strong>SMM & Трафик (2024)</strong>: аудит сети, рубрикатор контента, вовлекающий SMM (геймификация, рейтинги активности, акции) и эффективный таргет в VK/Яндекс.
-                                </div>
+        <!-- Contact Section / Terminal Form -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+                <div class="contact-header">
+                    <h2 class="section-title">ЗАПУСТИТЬ <span class="text-glow-magenta">ТРАФИК</span></h2>
+                    <p class="section-desc">Оставьте заявку. Мы проведем бесплатный аудит ваших текущих соцсетей и предложим стратегию вывода вашего клуба в ТОП-1 города.</p>
+                </div>
+                
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">gorky_marketing_terminal.sh</div>
+                        <div class="terminal-status">SECURE CONNECTION</div>
+                    </div>
+                    
+                    <form class="terminal-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+                                <input type="text" id="form-name" required placeholder="Например, Алексей">
+                                <span class="input-line"></span>
                             </div>
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon text-violet">✓</div>
-                                <div class="achieve-text">
-                                    <strong>Премиум-ребрендинг (2025)</strong>: строгий минимализм с акцентами металлика и неонового света. Оформление соцсетей, софта, заставок ПО, вывесок и навигации для клуба в Сочи.
-                                </div>
-                            </div>
-                            <div class="case-achieve-item">
-                                <div class="achieve-icon text-violet">✓</div>
-                                <div class="achieve-text">
-                                    <strong>Рост лояльности & Поддержка 24/7</strong>: атмосфера «премиум-лаунджа» увеличила средний чек. Непрерывный контакт в рабочих чатах и еженедельные планерки.
-                                </div>
+                            <div class="form-group">
+                                <label for="form-project">НАЗВАНИЕ КЛУБА / ПРОЕКТА</label>
+                                <input type="text" id="form-project" required placeholder="Например, CyberZone">
+                                <span class="input-line"></span>
                             </div>
                         </div>
                         
-                        <div class="case-stats-row">
-                            <div class="case-stat">
-                                <div class="case-stat-val text-violet">2024-2025</div>
-                                <div class="case-stat-lbl">Было / Стало</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-link">ССЫЛКА НА ТЕКУЩИЕ СОЦ.СЕТИ (ЕСЛИ ЕСТЬ)</label>
+                                <input type="url" id="form-link" placeholder="vk.com/yourclub">
+                                <span class="input-line"></span>
                             </div>
-                            <div class="case-stat">
-                                <div class="case-stat-val text-violet">360°</div>
-                                <div class="case-stat-lbl">SMM + Дизайн</div>
-                            </div>
-                            <div class="case-stat">
-                                <div class="case-stat-val text-violet">24/7</div>
-                                <div class="case-stat-lbl">Связь</div>
+                            <div class="form-group">
+                                <label for="form-contact">TELEGRAM / WHATSAPP / ТЕЛЕФОН</label>
+                                <input type="text" id="form-contact" required placeholder="@gorky_marketing или +7...">
+                                <span class="input-line"></span>
                             </div>
                         </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="form-message">ОПИШИТЕ ВАШУ ЗАДАЧУ</label>
+                            <textarea id="form-message" rows="4" placeholder="Каких результатов вы хотите достичь? Каковы основные проблемы с посещаемостью?"></textarea>
+                            <span class="input-line"></span>
+                        </div>
+                        
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">ИНИЦИИРОВАТЬ АУДИТ</span>
+                                <span class="btn-loader"></span>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="terminal-success-message" id="success-message">
+                        <div class="success-icon">✓</div>
+                        <h3>ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА</h3>
+                        <p>Наш SMM-специалист свяжется с вами в течение 2 часов для проведения бесплатного разбора вашей группы.</p>
+                        <button class="btn btn-outline btn-reset-form">Отправить еще одну заявку</button>
                     </div>
                 </div>
             </div>
@@ -651,76 +1500,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section / Terminal Form -->
-        <section class="contact-section" id="contact">
-            <div class="container contact-container">
-                <div class="contact-header">
-                    <h2 class="section-title">ЗАПУСТИТЬ <span class="text-glow-magenta">ТРАФИК</span></h2>
-                    <p class="section-desc">Оставьте заявку. Мы проведем бесплатный аудит ваших текущих соцсетей и предложим стратегию вывода вашего клуба в ТОП-1 города.</p>
-                </div>
-                
-                <div class="terminal-wrapper">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="terminal-title">gorky_marketing_terminal.sh</div>
-                        <div class="terminal-status">SECURE CONNECTION</div>
-                    </div>
-                    
-                    <form class="terminal-form" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="form-name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
-                                <input type="text" id="form-name" required placeholder="Например, Алексей">
-                                <span class="input-line"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-project">НАЗВАНИЕ КЛУБА / ПРОЕКТА</label>
-                                <input type="text" id="form-project" required placeholder="Например, CyberZone">
-                                <span class="input-line"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="form-link">ССЫЛКА НА ТЕКУЩИЕ СОЦ.СЕТИ (ЕСЛИ ЕСТЬ)</label>
-                                <input type="url" id="form-link" placeholder="vk.com/yourclub">
-                                <span class="input-line"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-contact">TELEGRAM / WHATSAPP / ТЕЛЕФОН</label>
-                                <input type="text" id="form-contact" required placeholder="@gorky_marketing или +7...">
-                                <span class="input-line"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="form-message">ОПИШИТЕ ВАШУ ЗАДАЧУ</label>
-                            <textarea id="form-message" rows="4" placeholder="Каких результатов вы хотите достичь? Каковы основные проблемы с посещаемостью?"></textarea>
-                            <span class="input-line"></span>
-                        </div>
-                        
-                        <div class="form-submit-container">
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <span class="btn-text">ИНИЦИИРОВАТЬ АУДИТ</span>
-                                <span class="btn-loader"></span>
-                            </button>
-                        </div>
-                    </form>
-                    
-                    <div class="terminal-success-message" id="success-message">
-                        <div class="success-icon">✓</div>
-                        <h3>ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА</h3>
-                        <p>Наш SMM-специалист свяжется с вами в течение 2 часов для проведения бесплатного разбора вашей группы.</p>
-                        <button class="btn btn-outline btn-reset-form">Отправить еще одну заявку</button>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -738,8 +1517,8 @@
                 <a href="#hero">О нас</a>
                 <a href="#niches">Направления</a>
                 <a href="#case">Кейсы</a>
-                <a href="#news">Блог и статьи</a>
                 <a href="#contact">Контакты</a>
+                <a href="#news">Блог и статьи</a>
             </div>
 
             <div class="footer-contacts">
