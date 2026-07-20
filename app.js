@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatsCounter();
     initContactForm();
     initScrollSequence();
+    initStormTabs();
 });
 
 /* ==========================================
@@ -703,5 +704,31 @@ function initScrollSequence() {
         }
     });
 }
+
+/* ==========================================
+   CYBER ARENA STORM CASE TABS
+   ========================================== */
+function initStormTabs() {
+    const tabBtns = document.querySelectorAll('.storm-tab-btn');
+    const tabContents = document.querySelectorAll('.storm-tab-content');
+    
+    if (!tabBtns.length) return;
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-storm-tab');
+            
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            const targetContent = document.getElementById(`storm-tab-${targetTab}`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+}
+
 
 

@@ -1165,6 +1165,104 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 10px #a855f7 !important;
 }
 
+/* --- Cyber Arena STORM Dual Case Tabs --- */
+.storm-visual-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.storm-tabs {
+    display: flex;
+    gap: 8px;
+    background: rgba(10, 12, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 6px;
+    backdrop-filter: blur(10px);
+}
+
+.storm-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.storm-tab-btn:hover {
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.storm-tab-btn.active[data-storm-tab="new"] {
+    background: rgba(245, 185, 66, 0.12);
+    border-color: rgba(245, 185, 66, 0.5);
+    color: #ffd700;
+    box-shadow: 0 0 15px rgba(245, 185, 66, 0.2);
+}
+
+.storm-tab-btn.active[data-storm-tab="old"] {
+    background: rgba(168, 85, 247, 0.12);
+    border-color: rgba(168, 85, 247, 0.5);
+    color: #c084fc;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+.tab-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.tab-dot.gold {
+    background: #ffd700;
+    box-shadow: 0 0 6px #ffd700;
+}
+
+.tab-dot.purple {
+    background: #c084fc;
+    box-shadow: 0 0 6px #c084fc;
+}
+
+.storm-tab-content {
+    display: none;
+}
+
+.storm-tab-content.active {
+    display: block;
+    animation: fadeInStorm 0.35s ease forwards;
+}
+
+@keyframes fadeInStorm {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bg-gold {
+    background: radial-gradient(circle, rgba(245, 185, 66, 0.2) 0%, transparent 70%) !important;
+}
+
 .case-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent);
