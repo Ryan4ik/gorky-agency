@@ -786,7 +786,11 @@ function initCaseCarousel() {
         track.style.transform = `translate3d(${offsetPercentage}%, 0, 0)`;
         
         pageBtns.forEach((btn, idx) => {
-            btn.classList.toggle('active', idx === currentIndex);
+            const isActive = idx === currentIndex;
+            btn.classList.toggle('active', isActive);
+            if (isActive && window.innerWidth <= 768) {
+                btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
         });
     }
 

@@ -2052,40 +2052,86 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95rem;
     }
     
+    .case-section {
+        padding: 48px 0;
+    }
+
     .case-carousel-viewport {
-        width: calc(100% + 40px);
-        margin-left: -20px;
-        margin-right: -20px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-right: -16px;
     }
     
     .case-slide {
-        padding: 0 20px;
+        padding: 0 16px;
     }
 
     .case-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .case-carousel-controls {
+        margin-top: 24px;
+        gap: 8px;
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .case-carousel-pagination {
+        gap: 6px;
+        overflow-x: auto;
+        max-width: calc(100vw - 110px);
+        padding: 6px 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .case-carousel-pagination::-webkit-scrollbar {
+        display: none;
+    }
+
+    .case-page-num {
+        padding: 6px 11px;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        border-radius: 4px;
+    }
+
+    .case-carousel-arrow {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
     }
     
     .case-stats-row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 12px;
-        padding-top: 24px;
+        gap: 8px;
+        padding-top: 20px;
     }
     
     .case-stat {
         flex: 1;
+        min-width: 0;
     }
     
     .case-stat-val {
-        font-size: 1.2rem;
+        font-size: clamp(0.72rem, 3.2vw, 1.05rem);
         margin-bottom: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .case-stat-lbl {
-        font-size: 0.65rem;
-        line-height: 1.3;
+        font-size: 0.62rem;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .niches-grid {
