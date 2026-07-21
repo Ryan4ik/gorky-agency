@@ -2029,6 +2029,12 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 16px;
     }
 
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 48px;
+        min-height: auto;
+    }
+
     .niches-section, .news-section, .contact-section {
         padding: 48px 0;
     }
