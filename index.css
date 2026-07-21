@@ -2025,6 +2025,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .niches-section, .news-section, .contact-section {
+        padding: 48px 0;
+    }
+
+    .section-header {
+        margin-bottom: 24px;
+    }
+
+    .niche-card {
+        padding: 24px 18px;
+    }
+
+    .news-content {
+        padding: 18px 16px;
+    }
+
+    .footer {
+        padding-top: 48px;
+    }
+
     .header-container {
         height: 80px;
     }
@@ -2269,7 +2293,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .terminal-form {
-        padding: 24px;
+        padding: 20px 16px;
     }
     
     .footer-container {
