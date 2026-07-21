@@ -785,11 +785,13 @@ function initCaseCarousel() {
         const offsetPercentage = -currentIndex * 100;
         track.style.transform = `translate3d(${offsetPercentage}%, 0, 0)`;
         
+        const paginationContainer = document.querySelector('.case-carousel-pagination');
         pageBtns.forEach((btn, idx) => {
             const isActive = idx === currentIndex;
             btn.classList.toggle('active', isActive);
-            if (isActive && window.innerWidth <= 768) {
-                btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            if (isActive && paginationContainer && window.innerWidth <= 768) {
+                const scrollLeft = btn.offsetLeft - (paginationContainer.clientWidth / 2) + (btn.clientWidth / 2);
+                paginationContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
             }
         });
     }
