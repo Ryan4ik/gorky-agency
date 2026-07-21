@@ -617,10 +617,10 @@ function initScrollSequence() {
     let loadedCount = 0;
     let sequenceActive = false;
     
-    // Naming convention: Gorky_Digital_[0040-0120].exr Render_109240.jpg to Render_109320.jpg
+    // Naming convention: Gorky_Digital_00000.jpg to Gorky_Digital_00080.jpg
     const getFrameUrl = (index) => {
-        const frameNum = 109239 + index;
-        return `assets/sequence/Gorky_Digital_[0040-0120].exr Render_${frameNum}.jpg`;
+        const frameNum = (index - 1).toString().padStart(5, '0');
+        return `assets/sequence/Gorky_Digital_${frameNum}.jpg`;
     };
     
     // Preload all frames
